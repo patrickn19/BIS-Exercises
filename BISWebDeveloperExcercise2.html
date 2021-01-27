@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 {text-align: center;}
+h2 {text-align: center;}
+h3 {text-align: center;}
+button {width: 10%;
+		height: 100px;
+		margin-left: 45%;
+		margin-right: 45%;
+		}
+</style>
+</head>
+<body>
+<h1>The JavaScript Lottery</h1><br>
+<h2>Click the button to draw a number.</h2>
+<button onclick = "myButton()">Let's Play!</button>
+<h2 id="randNumber"> Your Number: 0</h2>
+
+<script>
+function myButton() {
+  document.getElementById("randNumber").innerHTML = "Your Number: " + Math.floor(Math.random() * 100000);
+  
+  if (randNumber <= 1000 ) {
+    setTimeout(function(){ alert("Congrats! You Won!"); }, 10);
+  }else{
+  setTimeout(function(){ alert("Sorry. You Lost!"); }, 10);
+  }
+}
+</script>
+
+<h3>* Any number in the 1 to 1000 range wins!</h3>
+</body>
+</html>
